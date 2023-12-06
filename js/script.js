@@ -1,3 +1,4 @@
+// NavBar Transation
 window.addEventListener("scroll", () => {
   const verticalScrollPx = window.scrollY || window.pageYOffset;
   let navbar = document.getElementById("navbar");
