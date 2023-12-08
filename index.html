@@ -16,11 +16,16 @@
 <body>
     <header>
         <nav id="navbar">
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#education">Eductaion</a></li>
-                <li><a href="#experience">Experience</a></li>
-                <li><a href="#certificates">Certificates</a></li>
+            <ul id="nav-toggler">
+                <li>
+                    <a href="#toggle"  class="nav-toggler" onclick="navToggle()"><i class="fa fa-bars"></i></a>
+                </li>
+             </ul>
+            <ul id="nav-links">
+                <li><a href="#about" onclick="navToggle()" class="links">About</a></li>
+                <li><a href="#education" onclick="navToggle()" class="links">Eductaion</a></li>
+                <li><a href="#experience" onclick="navToggle()" class="links">Experience</a></li>
+                <li><a href="#certificates" onclick="navToggle()" class="links">Certificates</a></li>
             </ul>
         </nav>
     </header>
@@ -41,6 +46,7 @@
                     <li><a title="Follow me on X" href="https://twitter.com/aimad_imara" target="_blank"><i
                                 class="fab fa-twitter-square"></i></a></li>
                 </ul>
+                
             </div>
         </div>
         <div id="about">

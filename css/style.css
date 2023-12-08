@@ -34,7 +34,12 @@ nav {
     top: 0;
     width: 100%;
     z-index: 1000;
+    text-align: end;
 }
+nav>ul:not(#nav-links){
+    display: none;
+}
+
 nav > ul {
     list-style-type: none;
     display: flex;
@@ -134,7 +139,6 @@ nav > ul > li > a:hover{
     margin-top: 5rem;
     padding: 2rem;
     flex-wrap: wrap;
-    min-width: 500px;
     justify-content: space-between;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
     border-radius: 10px;
@@ -217,7 +221,7 @@ nav > ul > li > a:hover{
     text-align: center;
 }
 .card>div:last-child>p {
-    margin-top: 0.5em;
+    margin: 0.5em;
     font-style: italic;
     color: rgb(78, 75, 75);
 }
@@ -329,23 +333,55 @@ footer{
     opacity: 1;
     visibility: visible;
 }
+
 /*  END BACK TO TOP BUTTON  */
 /* END CONTENT */
 
 /* MEDIA QUERIES */
-@media (max-width: 880px){
+@media (max-width: 850px){
+    .nav-links-show {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: right;
+        text-align: right;
+        height:fit-content;
+        width: 100%;
+        right: 0;
+        padding: 0.5rem 2rem; 
+        background-color: rgba(26, 26, 26,0.9);
+        position: absolute;
+        margin-top:1em ;
+    }
+
+    nav>ul{
+        align-items: end;
+        gap: 1rem;
+    }
+    nav>ul:not(#nav-links) {
+        display: flex;
+    }
+    nav>ul:is(#nav-links) {
+        display: none;
+    }
     .about-content{
         flex: 0 0 100%;
+    
     }
-    .card>div{
-        height: 50%;
+    .card{
+        flex-direction: column;
+        height: auto;
+        width: 100%;
     }
+
     .card>div:first-child {
         flex: 0 0 100%;
         border-radius: 0;
         border-top-right-radius: 10px;
         border-top-left-radius: 10px;
+        width: 100%;
+        padding: 2rem 0;
     }
+
     .certificates{
         justify-content: center;
     }
@@ -354,5 +390,12 @@ footer{
         border-bottom-right-radius: 10px;
         border-bottom-left-radius: 10px;
         flex: 0 0 100%;
+        height: auto;
+        padding: 2rem 0;
+        width: 100%;
+    }
+    .certificate{
+        flex: 0 0 100%;
+        min-width: 100%;
     }
 }

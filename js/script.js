@@ -1,7 +1,8 @@
 // NavBar Transation
+let navbar = document.getElementById("navbar");
+
 window.addEventListener("scroll", () => {
   const verticalScrollPx = window.scrollY || window.pageYOffset;
-  let navbar = document.getElementById("navbar");
 
   if (verticalScrollPx < 500) {
     navbar.style.backgroundColor = "transparent";
@@ -14,3 +15,11 @@ document.getElementById("navbar").addEventListener("transitionend", () => {
   let navbar = document.getElementById("navbar");
   navbar.classList.remove("transition-navbar");
 });
+
+// NavBar links Toggle
+let navbarLinks = document.getElementById("nav-links");
+navToggle = () => {
+  navbarLinks.classList.contains("nav-links-show")
+    ? navbarLinks.classList.remove("nav-links-show")
+    : navbarLinks.classList.add("nav-links-show");
+};
