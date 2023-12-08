@@ -285,57 +285,32 @@ footer{
 #social-media>ul>li>a{
     color: white;
     font-size: 1.4rem;
-}
-#social-media>ul>li>a:hover{
-    color: rgb(255, 228, 118);
-    font-size: 1.6rem;
-    transition: all 0.3s ease;
+    border-radius: 50%;
+    padding: 0.5em 0.7em;
 }
 /* END FOOTER */
-/* BACK TO TOP BUTTON */
-#button {
-    display: inline-block;
-    background-color: #FF9800;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    border-radius: 4px;
-    position: fixed;
-    bottom: 30px;
-    right: 30px;
-    transition: background-color .3s,
-        opacity .5s, visibility .5s;
-    opacity: 0;
-    visibility: hidden;
-    z-index: 10000;
-}
 
-#button::after {
-    content: "\f077";
-    font-family: FontAwesome;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 2em;
-    line-height: 50px;
-    color: #fff;
+/* ICONS */
+.twitter:hover{
+    background-color: black !important;
+    color: white !important;
+        box-shadow: 0 0px 5px 0 rgba(255, 255, 255, 0.5);
 }
+.linkdIn:hover{
+    background-color: rgb(0, 119, 181) !important;
+    color: white !important;
+    box-shadow: 0 0px 5px 0 rgba(255, 255, 255, 0.5);}
+    
+.gitHub:hover{
+    background-color: rgb(51, 51, 51) !important;
+    color: white !important;
+    box-shadow: 0 0px 5px 0  rgba(255, 255, 255, 0.5);}
 
-#button:hover {
-    cursor: pointer;
-    background-color: #333;
-}
+/* END ICONS */
 
-#button:active {
-    background-color: #555;
-}
 
-#button.show {
-    opacity: 1;
-    visibility: visible;
-}
-
-/*  END BACK TO TOP BUTTON  */
 /* END CONTENT */
+
 
 /* MEDIA QUERIES */
 @media (max-width: 850px){
@@ -360,6 +335,8 @@ footer{
     }
     nav>ul:not(#nav-links) {
         display: flex;
+        font-size: 1.6rem;
+        padding: 0;
     }
     nav>ul:is(#nav-links) {
         display: none;
